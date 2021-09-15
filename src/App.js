@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     const wss = new WebSocket(websocketURL)
-    wss.onopen = (e) => console.log('Websocket is connected.')
+    wss.onopen = () => console.log('Websocket is connected.')
     wss.onmessage = e => console.log(e);
   })
 
