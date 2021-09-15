@@ -18,7 +18,7 @@ function App() {
     const wss = new WebSocket(websocketURL)
     wss.onopen = () => console.log('Websocket is connected.')
     wss.onmessage = e => console.log(e);
-  })
+  }, [])
 
   return (
     <div className="App">
