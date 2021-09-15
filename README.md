@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+To successfully open a websocket connection to our asset service, you will need an authorization token.
+
 ## Available Scripts
 
 In the project directory, you can run:
