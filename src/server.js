@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const { DateTime } = require('luxon');
 
 const app = express();
+app.use(cors());
 const port = 3001;
 
 function getRandomInt(min, max) {
