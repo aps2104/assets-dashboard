@@ -1,24 +1,19 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For this test you will need to fetch data from a node server and use the data provided to build components which show the following data in a grid:
 
-To successfully open a websocket connection to our asset service, you will need an authorization token.
+- The top ten asset data points by value, sorted descending by value
+- Average state of charge of the previous 100 data points
+- A message displaying the most recent asset data point
 
-## Available Scripts
+You can run the node server with the following command `yarn run server` or `npm run server`. You will find data at the following endpoint: `http://localhost:3001/assets`. This endpoint will return an array of objects with the following shape:
 
-In the project directory, you can run:
+```js
+{
+  asset: "asset_1";
+  reading: 9;
+  timeStamp: "2021-10-08T15:41:00.892+01:00";
+}
+```
 
-### `yarn install`
+The `reading` property refers to the value and is also the state of charge.
 
-Installs all the dependencies for this project.
-
-### `yarn start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Do not worry too much about the design but focus more on structuring your code well and writing readable and testable code.
