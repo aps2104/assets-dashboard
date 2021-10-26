@@ -1,19 +1,61 @@
-For this test you will need to fetch data from a node server and use the data provided to build components which show the following data in a grid:
+# Frontend interview task: Asset Feed Dashboard
 
-- The top ten asset data points by value, sorted descending by value
-- Average state of charge of the previous 100 data points
-- A message displaying the most recent asset data point
+## About the task
 
-You can run the node server with the following command `yarn run server` or `npm run server`. You will find data at the following endpoint: `http://localhost:3001/assets`. This endpoint will return an array of objects with the following shape:
+- You'll have an hour to work on the task. It's unlikely that you'll have time to complete every aspect of it, and we don't expect you to - just do what you can.
+- Feel free to use Google, StackOverflow, docs etc. where it helps!
+
+## Task
+
+### Background
+
+Limejump manages a number of energy assets on behalf of our customers, such as batteries and gas turbines. We have a portal which customers can log into in order to see information about their contracts and invoices. We want to add a new page to the portal that shows information about their assets.
+
+### What you need to do
+
+Create an 'asset feed dashboard' that shows the following information about each of the customer's assets:
+
+- The name of the asset
+- The most recent reading from the asset in kW (i.e. the amount of power the asset is currently producing)
+- The highest reading the asset has recently produced in kW
+
+This repo contains a mock API that provides the required information to do this at its `/assets` endpoint, which returns an array of objects that looks like
 
 ```js
-{
-  asset: "asset_1";
-  reading: 9;
-  timeStamp: "2021-10-08T15:41:00.892+01:00";
-}
+[
+  {
+    asset: "Asset 1";
+    reading: 123.45;
+    timeStamp: "2021-10-08T15:41:00.892+01:00";
+  },
+  {
+    asset: "Asset 1";
+    reading: 678.90;
+    timeStamp: "2021-10-08T15:39:00.892+01:00";
+  },
+  {
+    asset: "Asset 2";
+    reading: 234.56;
+    timeStamp: "2021-10-08T15:41:00.892+01:00";
+  },
+  ...
+]
 ```
 
-The `reading` property refers to the value and is also the state of charge.
+(In the above case, Asset 1 has a most recent reading of 123.45kW and a highest reading of 678.90kW.)
 
-Do not worry too much about the design but focus more on structuring your code well and writing readable and testable code.
+A mockup of the required design is in `table_design.pdf`, and more information about styles is in `table_styles.pdf`.
+
+### What you don't need to do
+
+- Write any tests
+- Show any pretty loading components while fetching the asset information
+- Deal with anything other than a 200 response from the mock API
+
+## Setup
+
+Run `npm install` to install the required dependencies.
+
+To serve the dashboard, run `npm run start`.
+
+To serve the mock API, run `npm run server`. It will start on port 3001 by default.
