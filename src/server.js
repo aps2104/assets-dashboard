@@ -16,7 +16,7 @@ function getRandomInt(min, max) {
 function makeReading(assetName) {
     return  {
         asset: assetName,
-        reading: getRandomInt(3, 10),
+        reading: getRandomInt(3, 100000) / 100,
         timeStamp: DateTime.now().minus(getRandomInt(200, 20000)).toISO()
         }
 }
@@ -24,9 +24,9 @@ function makeReading(assetName) {
 function returnAssets() {
     let res = []
     for (var i = 0; i < 100; i++) {
-        res.push(makeReading("asset_1"));
-        res.push(makeReading("asset_2"));
-        res.push(makeReading("asset_3"));
+        res.push(makeReading("Asset 1"));
+        res.push(makeReading("Asset 2"));
+        res.push(makeReading("Asset 3"));
     }
     return res
 }
