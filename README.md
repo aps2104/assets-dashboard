@@ -36,7 +36,7 @@ This repo contains a mock API that provides the required information to do this 
 
 A mockup of the required design is in `table_design.pdf`, and more information about styles is in `table_styles.pdf`.
 
-### What you don't need to do
+### What's not included
 
 - Write any tests
 - Show any pretty loading components while fetching the asset information
