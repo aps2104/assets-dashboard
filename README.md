@@ -1,9 +1,4 @@
-# Frontend interview task: Asset Feed Dashboard
 
-## About the task
-
-- You'll have an hour to work on the task. It's unlikely that you'll have time to complete every aspect of it, and we don't expect you to - just do what you can.
-- Feel free to use Google, StackOverflow, docs etc. where it helps!
 
 ## Task
 
