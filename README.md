@@ -2,11 +2,6 @@
 
 ## Task
 
-### Background
-
-Limejump manages a number of energy assets on behalf of our customers, such as batteries and gas turbines. We have a portal which customers can log into in order to see information about their contracts and invoices. We want to add a new page to the portal that shows information about their assets.
-
-### What you need to do
 
 Create an 'asset feed dashboard' that shows the following information about each of the customer's assets:
 
